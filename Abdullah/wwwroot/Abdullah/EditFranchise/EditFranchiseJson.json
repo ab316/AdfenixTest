@@ -1,0 +1,14 @@
+{
+	"Html": "/Abdullah/EditFranchise/EditFranchiseJson.html",
+	"name$": "",
+	"street$": "",
+	"number$": "",
+	"zipCode$": "",
+	"city$":  "",
+	"country$": "",
+	"SaveTrigger$": 0,
+	"address": "",
+	"newSaleJson": {},
+	"transactions": [{}],
+	"AddSaleTrigger$": 0
+}

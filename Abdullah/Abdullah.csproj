@@ -6,11 +6,11 @@
     <ProductVersion>9.0.20706</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectTypeGuids>{C86118D7-451E-4933-BFEE-A1EFDB162FD7};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{4AE61BCE-B6F5-481D-B6DC-D54ECD9F0AB5}</ProjectGuid>
+    <ProjectGuid>{42BE764C-E76E-4D71-A1B7-950FEC2DA5B4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Adfenix</RootNamespace>
-    <AssemblyName>Adfenix</AssemblyName>
+    <RootNamespace>Abdullah</RootNamespace>
+    <AssemblyName>Abdullah</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -62,16 +62,58 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Corporation.cs" />
+    <Compile Include="FranchiseUtils.cs" />
+    <Compile Include="Objects\Franchise.cs" />
+    <Compile Include="Objects\Corporation.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="HttpHandlers.cs" />
+    <Compile Include="Objects\Transaction.cs" />
+    <Compile Include="wwwroot\Abdullah\Start\CorporationJson.json.cs">
+      <DependentUpon>CorporationJson.json</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="wwwroot\Adfenix\CorporationJson.json.cs">
-      <DependentUpon>CorporationJson.json</DependentUpon>
+    <Compile Include="wwwroot\Abdullah\EditFranchise\EditFranchiseJson.json.cs">
+      <DependentUpon>EditFranchiseJson.json</DependentUpon>
+    </Compile>
+    <Compile Include="wwwroot\Abdullah\Start\StartPageJson.json.cs">
+      <DependentUpon>StartPageJson.json</DependentUpon>
+    </Compile>
+    <Compile Include="wwwroot\Abdullah\Start\FranchisesJson.json.cs">
+      <DependentUpon>FranchisesJson.json</DependentUpon>
+    </Compile>
+    <Compile Include="wwwroot\Abdullah\EditFranchise\TransactionsJson.json.cs">
+      <DependentUpon>TransactionsJson.json</DependentUpon>
+    </Compile>
+    <Compile Include="wwwroot\Abdullah\EditFranchise\RegisterHomeSaleJson.json.cs">
+      <DependentUpon>RegisterHomeSaleJson.json</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="wwwroot\Adfenix\CorporationJson.html" />
-    <TypedJSON Include="wwwroot\Adfenix\CorporationJson.json">
+    <Content Include="wwwroot\Abdullah\Start\CorporationJson.html" />
+    <None Include="wwwroot\Abdullah\Start\FranchisesJson.html" />
+    <None Include="wwwroot\Abdullah\Start\StartPageJson.html" />
+    <TypedJSON Include="wwwroot\Abdullah\Start\FranchisesJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+    <TypedJSON Include="wwwroot\Abdullah\Start\StartPageJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+    <TypedJSON Include="wwwroot\Abdullah\EditFranchise\TransactionsJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+    <None Include="wwwroot\Abdullah\EditFranchise\RegisterHomeSaleJson.html" />
+    <TypedJSON Include="wwwroot\Abdullah\EditFranchise\RegisterHomeSaleJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+    <None Include="wwwroot\Abdullah\EditFranchise\TransactionsJson.html" />
+    <None Include="wwwroot\Abdullah\EditFranchise\EditFranchiseJson.html" />
+    <TypedJSON Include="wwwroot\Abdullah\EditFranchise\EditFranchiseJson.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
+  </ItemGroup>
+  <ItemGroup>
+    <TypedJSON Include="wwwroot\Abdullah\Start\CorporationJson.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
   </ItemGroup>

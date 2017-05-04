@@ -1,0 +1,63 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <template is="dom-bind">
+        <h3>Settings: {{model.name$}}</h3>
+        <h4>Edit franchise settings</h4>
+
+        <fieldset>
+            <label>Name:</label>
+            <input value="{{model.name$::input}}" />
+        </fieldset>
+
+        <fieldset>
+            <label>Street:</label>
+            <input value="{{model.street$::input}}" />
+        </fieldset>
+
+        <fieldset>
+            <label>Number:</label>
+            <input value="{{model.number$::input}}" />
+        </fieldset>
+
+        <fieldset>
+            <label>Zip Code:</label>
+            <input value="{{model.zipCode$::input}}" />
+        </fieldset>
+
+        <fieldset>
+            <label>City:</label>
+            <input value="{{model.city$::input}}" />
+        </fieldset>
+
+        <fieldset>
+            <label>Country:</label>
+            <input value="{{model.country$::input}}" />
+        </fieldset>
+
+        <fieldset>
+            <label>Address:</label>
+            <span>{{model.address}}</span>
+        </fieldset>
+
+        <button value="{{model.SaveTrigger$::click}}" onmousedown="++this.value">Save</button>
+
+        <h4>Register new Home of Sale</h4>
+        <starcounter-include partial="{{model.newSaleJson}}"></starcounter-include>
+        <button value="{{model.AddSaleTrigger$::click}}" onmousedown="++this.value">Save</button>
+
+        <h4>List of Transactions</h4>
+        <table>
+            <tr>
+                <th style="min-width:150px">Date</th>
+                <th style="min-width:150px">Sales Price</th>
+                <th style="min-width:150px">Commission</th>
+                <th style="min-width:250px">Address</th>
+            </tr>
+        </table>
+        <template is="dom-repeat" items="{{model.transactions}}">
+            <starcounter-include partial="{{item}}"></starcounter-include>
+        </template>
+
+    </template>
+</template>

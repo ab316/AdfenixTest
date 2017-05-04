@@ -1,0 +1,15 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <template is="dom-bind">
+        <table>
+            <tr>
+                <td style="min-width:150px"><a href="{{model.url}}">{{model.name}}</a></td>
+                <td style="min-width:150px">{{model.homesSold}}</td>
+                <td style="min-width:150px">{{model.totalCommission}}</td>
+                <td style="min-width:150px">{{model.averageCommission}}</td>
+                <td style="min-width:150px">{{model.positiveTrend}}</td>
+            </tr>
+        </table>
+    </template>
+</template>

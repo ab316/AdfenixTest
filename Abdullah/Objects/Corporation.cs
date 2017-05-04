@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Starcounter;
 
-namespace Adfenix
+namespace Abdullah
 {
     /**
      * Corporation database object.
@@ -15,5 +15,6 @@ namespace Adfenix
     public class Corporation
     {
         public string name;
+        public QueryResultRows<Franchise> franchises => Db.SQL<Franchise>("SELECT f from Franchise f WHERE f.corporation = ?", this);
     }
 }

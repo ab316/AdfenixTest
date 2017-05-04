@@ -1,0 +1,44 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <template is="dom-bind">
+        <h4>{{model.name}}</h4>
+        <h5>Franchise Offices</h5>
+        <h6>Sort On</h6>
+
+        <table>
+            <tr>
+                <td><button value="{{model.sortNumHomes$::click}}" onmousedown="++this.value"># of Homes</button></td>
+                <td><button value="{{model.sortTotalCommission$::click}}" onmousedown="++this.value">Total Commission</button></td>
+                <td><button value="{{model.sortAverageCommission$::click}}" onmousedown="++this.value">Average Commission</button></td>
+                <td><button value="{{model.sortPositiveTrend$::click}}" onmousedown="++this.value">Positive Trend</button></td>
+            </tr>
+        </table>
+
+        <div>
+        <table>
+            <tr>
+                <th style="min-width:150px">Name</th>
+                <th style="min-width:150px">Home Sold</th>
+                <th style="min-width:150px">Total Commission</th>
+                <th style="min-width:150px">Average Commission</th>
+                <th style="min-width:150px">Positive Trend</th>
+            </tr>
+        </table>
+            <template is="dom-repeat" items="{{model.franchises}}">
+                <div>
+                    <starcounter-include partial="{{item}}"></starcounter-include>
+                </div>
+            </template>
+        </div>
+
+        <div>
+        <h5>New Franchise Office</h5>
+            <fieldset>
+                <label>Name:</label>
+                <input value="{{model.newFranchiseName$::input}}" />
+                <button value="{{model.AddFranchiseTrigger$::click}}" onmousedown="++this.value">Save</button>
+            </fieldset>
+        </div>
+    </template>
+</template>
